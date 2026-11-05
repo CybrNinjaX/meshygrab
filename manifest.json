@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "MeshyGrab",
+  "version": "2.0.0",
+  "description": "Select 3D models from the page, choose a format (GLB, FBX, OBJ, STL, USDZ...) and download.",
+  "permissions": ["webRequest", "downloads", "storage", "activeTab", "scripting", "tabs"],
+  "host_permissions": ["<all_urls>"],
+  "background": { "service_worker": "background.js" },
+  "action": { "default_title": "MeshyGrab", "default_popup": "popup.html" },
+  "content_scripts": [
+    { "matches": ["<all_urls>"], "js": ["inject.js"], "run_at": "document_start", "world": "MAIN" },
+    { "matches": ["<all_urls>"], "js": ["content.js"], "run_at": "document_start" }
+  ]
+}

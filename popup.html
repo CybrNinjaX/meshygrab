@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8" /><link rel="stylesheet" href="popup.css" /></head>
+<body>
+  <section id="login">
+    <div class="login-brand"><div class="brand-mark">M</div><span>MeshyGrab</span></div>
+    <div class="login-visual" role="img" aria-label="A preview of colorful 3D models in a library">
+      <svg viewBox="0 0 336 142" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <linearGradient id="orb" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#aa9dff"/><stop offset="1" stop-color="#5f4ae8"/></linearGradient>
+          <linearGradient id="cube" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffca9c"/><stop offset="1" stop-color="#f1778b"/></linearGradient>
+          <linearGradient id="wave" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#8fe5d2"/><stop offset="1" stop-color="#3cbaa5"/></linearGradient>
+        </defs>
+        <rect x="16" y="12" width="304" height="118" rx="16" fill="var(--card)" stroke="var(--line)"/>
+        <rect x="28" y="24" width="84" height="94" rx="10" fill="var(--bg)" stroke="var(--line)"/>
+        <rect x="38" y="34" width="64" height="48" rx="7" fill="#f0edff"/>
+        <path d="M70 42 91 54v20L70 86 49 74V54z" fill="url(#cube)"/>
+        <path d="m70 42 21 12-21 12-21-12z" fill="#ffd9b7"/><path d="M70 66v20L49 74V54z" fill="#f99c92"/><path d="M70 66v20l21-12V54z" fill="#df637d"/>
+        <rect x="38" y="90" width="43" height="5" rx="2.5" fill="var(--line)"/><rect x="38" y="101" width="29" height="4" rx="2" fill="var(--line)"/>
+        <rect x="126" y="24" width="84" height="94" rx="10" fill="var(--bg)" stroke="var(--line)"/>
+        <rect x="136" y="34" width="64" height="48" rx="7" fill="#e7f8f4"/>
+        <path d="M168 39c13 0 22 10 22 22s-9 19-22 19-22-7-22-19 9-22 22-22z" fill="url(#wave)"/><path d="M152 60c7-7 25-8 33 0-7 10-26 11-33 0z" fill="#c5f4e8"/>
+        <rect x="136" y="90" width="43" height="5" rx="2.5" fill="var(--line)"/><rect x="136" y="101" width="29" height="4" rx="2" fill="var(--line)"/>
+        <rect x="224" y="24" width="84" height="94" rx="10" fill="var(--bg)" stroke="var(--line)"/>
+        <rect x="234" y="34" width="64" height="48" rx="7" fill="#f1edff"/>
+        <circle cx="266" cy="58" r="19" fill="url(#orb)"/><ellipse cx="259" cy="49" rx="6" ry="3" fill="#fff" opacity=".5"/>
+        <rect x="234" y="90" width="43" height="5" rx="2.5" fill="var(--line)"/><rect x="234" y="101" width="29" height="4" rx="2" fill="var(--line)"/>
+      </svg>
+    </div>
+    <div class="login-content">
+      <div class="eyebrow">YOUR MODEL LIBRARY</div>
+      <h1>Sign in to Meshy</h1>
+      <p>Open your Meshy account to browse your models. MeshyGrab works with the Meshy page you have open.</p>
+      <button id="signIn" class="primary wide">Continue to Meshy <span aria-hidden="true">↗</span></button>
+      <button id="continue" class="text-button wide">I’m already signed in</button>
+      <div class="login-note"><span class="lock-icon">▣</span> Your Meshy password is never shared with this extension.</div>
+    </div>
+    <div class="login-foot">Model downloads are saved through your browser.</div>
+  </section>
+  <section id="step1" hidden>
+    <header><h1>1. All models</h1><button id="read" class="primary">Read all cards</button></header>
+    <div id="progress"></div>
+    <div id="list" class="scroll"></div>
+    <footer>
+      <label><input type="checkbox" id="selAll" /> All (<span id="count">0</span>)</label>
+      <button id="next" class="primary">Next →</button>
+    </footer>
+  </section>
+  <section id="step2" hidden>
+    <header><h1>2. Download type</h1></header>
+    <div id="formats" class="scroll"></div>
+    <div id="status"></div>
+    <footer>
+      <button id="back">← Back</button>
+      <button id="go" class="primary">Download</button>
+    </footer>
+  </section>
+  <script src="popup.js"></script>
+</body>
+</html>
