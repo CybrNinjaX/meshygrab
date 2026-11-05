@@ -33,7 +33,7 @@ button:disabled { opacity: .5; cursor: default; }
 .chip.none { background: var(--line); color: var(--muted); }
 #login { min-height: 470px; display: flex; flex-direction: column; padding: 21px 22px 16px; background: radial-gradient(ellipse at 50% 42%, var(--soft), transparent 65%); }
 .login-brand { display: flex; align-items: center; gap: 9px; font-size: 14px; font-weight: 700; letter-spacing: -.2px; }
-.brand-mark { width: 28px; height: 28px; display: grid; place-items: center; border-radius: 9px; background: var(--accent); color: white; font-size: 16px; font-weight: 800; }
+.brand-logo { width: 30px; height: 30px; padding: 4px; border-radius: 9px; background: var(--accent); object-fit: contain; }
 .login-visual { width: 100%; margin: 11px auto 0; }
 .login-visual svg { display: block; width: 100%; height: auto; }
 .login-content { width: 100%; max-width: 300px; margin: auto; text-align: center; }

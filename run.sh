@@ -17,9 +17,16 @@ fi
 
 for candidate in google-chrome google-chrome-stable chromium chromium-browser; do
   if command -v "$candidate" >/dev/null 2>&1; then
-    exec "$(command -v "$candidate")" "${ARGS[@]}"
+    BROWSER="$(command -v "$candidate")"
+    # Ubuntu may provide chromium-browser as a Snap placeholder even when the
+    # Chromium Snap itself is missing. Skip browser wrappers that cannot run.
+    if "$BROWSER" --version >/dev/null 2>&1; then
+      exec "$BROWSER" "${ARGS[@]}"
+    fi
   fi
 done
 
-echo "Chrome or Chromium was not found. Install one, then run ./run.sh again." >&2
+echo "A working Chrome or Chromium installation was not found." >&2
+echo "On Ubuntu, install Chromium with: sudo snap install chromium" >&2
+echo "Then run ./run.sh again from the MeshyGrab folder." >&2
 exit 1

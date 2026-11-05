@@ -23,6 +23,7 @@ The launcher opens Meshy in a separate development profile and loads the unpacke
 4. Choose **Load unpacked** and select the project folder.
 5. Open or reload a Meshy page and sign in to Meshy there if needed.
 6. To keep the extension available in your regular Chrome profile, pin it from Chrome’s Extensions menu. Loading an unpacked extension this way is intended for local development and requires Developer mode.
+7. After changing the extension files, open `chrome://extensions` and click the extension’s reload button to apply the updated logo and code.
 
 ## Use
 
@@ -39,6 +40,7 @@ The launcher opens Meshy in a separate development profile and loads the unpacke
 - **A preview is missing:** Some cards do not provide a thumbnail, or the image host may prevent it from loading. The model name and file links can still be available.
 - **No formats are listed:** The page may not have exposed downloadable model links yet. Reopen or refresh the model page and scan again.
 - **The scan does not start:** Reload the Meshy page and reopen the extension. Chrome internal pages such as `chrome://extensions` do not allow content scripts to run.
+- **Linux says Chromium Snap must be installed:** Install Chromium with `sudo snap install chromium`, or install Google Chrome, then rerun `./run.sh` from the `meshygrab` folder.
 
 ## Notes
 
