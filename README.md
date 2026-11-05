@@ -2,13 +2,27 @@
 
 MeshyGrab is a Chrome extension that reads model cards and model file links from the active browser tab, lets you choose models and a file format, and downloads the matching files.
 
-## Install
+## Quick start
+
+Install Chrome or Chromium, then run the launcher for your operating system from the project folder:
+
+| Operating system | Command |
+| --- | --- |
+| Linux | `./run.sh` |
+| macOS (Terminal) | `./run.sh` |
+| macOS (Finder) | Double-click `run.command` |
+| Windows PowerShell | `./run.ps1` |
+
+The launcher opens Meshy in a separate development profile and loads the unpacked extension for that session. Sign in to Meshy in that browser window if needed. Keep using the launcher to start this development copy again.
+
+## Manual install
 
 1. Download or clone this project to your computer.
 2. In Chrome, open `chrome://extensions`.
 3. Turn on **Developer mode**.
 4. Choose **Load unpacked** and select the project folder.
 5. Open or reload a Meshy page and sign in to Meshy there if needed.
+6. To keep the extension available in your regular Chrome profile, pin it from Chrome’s Extensions menu. Loading an unpacked extension this way is intended for local development and requires Developer mode.
 
 ## Use
 
@@ -30,4 +44,5 @@ MeshyGrab is a Chrome extension that reads model cards and model file links from
 
 - The welcome screen is a sign-in handoff to Meshy, not a Meshy authentication system. Sign in on Meshy itself.
 - MeshyGrab reads data available to the extension from browser tabs and uses Chrome downloads to save selected files.
+- A launcher starts a separate development profile; it does not publish the extension or install it permanently in your everyday browser profile. For a regular local install, use **Load unpacked** above. Public Chrome distribution requires publishing through the Chrome Web Store.
 - Download only models you own or have permission to use, and follow Meshy’s terms and applicable laws.
